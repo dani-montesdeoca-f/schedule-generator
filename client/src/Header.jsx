@@ -1,10 +1,10 @@
-import chefClaudeLogo from "./images/chef-claude-icon.png"
+import scheduleLogo from "./images/daily-schedule-icon.png";
 
 export default function Header() {
     return (
         <header>
-            <img src={chefClaudeLogo}/>
-            <h1>Chef Claude</h1>
+            <img src={scheduleLogo}/>
+            <h1>Schedule generator</h1>
         </header>
     )
 }

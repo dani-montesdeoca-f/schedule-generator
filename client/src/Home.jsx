@@ -4,7 +4,7 @@ import ClaudeRecipe from "./components/ClaudeRecipe"
 
 export default function Home() {
     const [ingredients, setIngredients] = React.useState(
-        ["chicken", "all the main spices", "corn", "heavy cream", "pasta"]
+        ["Python", "Data structures and algorithms", "React", "Java", "AWS"]
     )
     const [recipe, setRecipe] = React.useState("")
 
@@ -29,11 +29,11 @@ export default function Home() {
             <form action={addIngredient} className="add-ingredient-form">
                 <input
                     type="text"
-                    placeholder="e.g. oregano"
+                    placeholder="e.g. Algorithms"
                     aria-label="Add ingredient"
                     name="ingredient"
                 />
-                <button>Add ingredient</button>
+                <button>Add Study Block</button>
             </form>
 
             {ingredients.length > 0 &&
