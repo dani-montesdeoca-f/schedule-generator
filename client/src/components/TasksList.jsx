@@ -1,8 +1,14 @@
 import React from 'react'
+import DeleteButton from "./DeleteButton";
+
 export default function TasksList(props) {
-    const tasksListItems = props.tasks.map(task => (
-        <li key={task}>{task}</li>
+    const tasksListItems = props.tasks.map((task, index) => (
+        <li key={index}>
+            {task}
+            <DeleteButton onClick={() => props.deleteTask(index)} label={`Delete ${task}`} />
+        </li>
     ))
+
     return (
         <section>
             <h2>Study blocks:</h2>

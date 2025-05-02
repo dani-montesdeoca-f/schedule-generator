@@ -21,8 +21,12 @@ export default function Home() {
     }
 
     function addTask(formData) {
-        const newTask = formData.get("ingredient")
+        const newTask = formData.get("task")
         setTasks(prevTasks => [...prevTasks, newTask])
+    }
+
+    function deleteTask(indexToDelete) {
+        setTasks(prevTasks => prevTasks.filter((_, i) => i !== indexToDelete));
     }
 
     return (
@@ -41,6 +45,7 @@ export default function Home() {
                 <TasksList
                     tasks={tasks}
                     getSchedule={getSchedule}
+                    deleteTask={deleteTask}
                 />
             }
 
